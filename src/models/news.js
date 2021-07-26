@@ -9,7 +9,7 @@ const newsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  author: {
+  owner: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
   },
