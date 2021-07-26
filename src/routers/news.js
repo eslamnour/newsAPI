@@ -4,7 +4,7 @@ const router = new express.Router();
 const auth = require("../middleware/auth");
 
 router.post("/news", auth, async (req, res) => {
-  const news = new Task({ ...req.body, owner: req.user._id });
+  const news = new News({ ...req.body, owner: req.author._id });
   try {
     await news.save();
     res.status(201).send(news);
